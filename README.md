@@ -107,10 +107,10 @@ Reflect on your work session and capture learnings into reusable artifacts.
 
 ## Installation
 
-### Option 1: Install from Repository
+### Option 1: Install from Marketplace (Recommended)
 
 ```bash
-# Add the plugin marketplace (if not already added)
+# Add the marketplace
 /plugin marketplace add nickwinder/claude-code-meta-plugin
 
 # Install the plugin
@@ -125,19 +125,27 @@ Reflect on your work session and capture learnings into reusable artifacts.
 ```bash
 # Clone the repository
 git clone https://github.com/nickwinder/claude-code-meta-plugin.git
+cd claude-code-meta-plugin
 
-# Test locally with --plugin-dir flag
-claude --plugin-dir ./claude-code-meta-plugin
+# Add the local marketplace for testing
+/plugin marketplace add .
+
+# Install from local marketplace
+/plugin install claude-code-meta
+
+# Or test directly with --plugin-dir flag
+claude --plugin-dir .
 ```
 
-### Option 3: Manual Installation
+### Updating the Plugin
 
-1. Download or clone this repository
-2. Copy to your Claude Code plugins directory:
-   ```bash
-   cp -r claude-code-meta-plugin ~/.claude/plugins/
-   ```
-3. Restart Claude Code
+```bash
+# Update all marketplaces and plugins
+/plugin marketplace update
+
+# Or update just this marketplace
+/plugin marketplace update claude-code-meta-marketplace
+```
 
 ## Quick Start
 

@@ -1,0 +1,14 @@
+{
+  "name": "claude-code-meta-marketplace",
+  "owner": {
+    "name": "Nick Winder"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-meta",
+      "source": ".",
+      "description": "Meta-plugin for generating Claude Code projects, skills, commands, and documentation. Provides tools to extend and customize Claude Code itself.",
+      "version": "0.0.1"
+    }
+  ]
+}
