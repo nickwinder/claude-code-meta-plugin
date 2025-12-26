@@ -1,0 +1,21 @@
+{
+  "name": "claude-code-meta",
+  "description": "Meta-plugin for generating Claude Code projects, skills, commands, and documentation. Provides tools to extend and customize Claude Code itself.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Nick Winder"
+  },
+  "keywords": [
+    "meta",
+    "generator",
+    "project-setup",
+    "skill-creation",
+    "documentation",
+    "claude-code"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickwinder/claude-code-meta-plugin"
+  },
+  "license": "MIT"
+}
