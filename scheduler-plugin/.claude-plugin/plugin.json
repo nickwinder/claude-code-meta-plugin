@@ -1,0 +1,18 @@
+{
+  "name": "claude-code-scheduler",
+  "description": "Cron-based task scheduler for automating Claude Code workflows. Schedule recurring AI-powered tasks with intelligent cron management.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Nick Winder"
+  },
+  "keywords": [
+    "scheduler",
+    "cron",
+    "automation",
+    "task-scheduling",
+    "workflow",
+    "recurring-tasks"
+  ],
+  "repository": "https://github.com/nickwinder/claude-code-scheduler-plugin",
+  "license": "MIT"
+}

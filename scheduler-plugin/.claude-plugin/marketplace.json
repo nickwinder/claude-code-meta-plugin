@@ -1,0 +1,10 @@
+{
+  "name": "claude-code-scheduler-marketplace",
+  "description": "Official marketplace for the Claude Code Scheduler plugin",
+  "plugins": [
+    {
+      "name": "claude-code-scheduler",
+      "source": "."
+    }
+  ]
+}
