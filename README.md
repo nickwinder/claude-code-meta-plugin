@@ -1,13 +1,23 @@
-# Claude Code Meta Plugin
+# Claude Code Meta Marketplace
 
 **Version:** 0.0.1
 **Author:** Nick Winder
 
-A meta-plugin for extending and customizing Claude Code itself. Generate CLAUDE.md files, create custom skills, design slash commands, and architect new Claude Code projects with expert guidance.
+A curated marketplace of plugins for extending and customizing Claude Code itself. Includes tools for generating projects, skills, commands, documentation, and automating workflows.
 
-## Overview
+## Available Plugins
 
-This plugin provides tools for meta-level Claude Code development - helping you build better Claude Code projects, skills, commands, and documentation. Perfect for power users who want to extend Claude Code's capabilities or create reusable project templates.
+### 📦 claude-code-meta (v0.0.1)
+Meta-plugin for extending and customizing Claude Code. Generate CLAUDE.md files, create custom skills, design slash commands, and architect new Claude Code projects with expert guidance.
+
+### ⏰ claude-code-scheduler (v0.1.0)
+Cron-based task scheduler for automating Claude Code workflows. Schedule recurring AI-powered tasks with intelligent cron management.
+
+---
+
+## Plugin: claude-code-meta
+
+Meta-level Claude Code development tools - helping you build better Claude Code projects, skills, commands, and documentation. Perfect for power users who want to extend Claude Code's capabilities or create reusable project templates.
 
 ## Features
 
@@ -113,8 +123,14 @@ Reflect on your work session and capture learnings into reusable artifacts.
 # Add the marketplace
 /plugin marketplace add nickwinder/claude-code-meta-plugin
 
-# Install the plugin
+# Install the meta plugin (for project/skill generation)
 /plugin install claude-code-meta
+
+# Install the scheduler plugin (for task automation)
+/plugin install claude-code-scheduler
+
+# Or install both
+/plugin install claude-code-meta claude-code-scheduler
 
 # Verify installation
 /plugin list
@@ -130,8 +146,9 @@ cd claude-code-meta-plugin
 # Add the local marketplace for testing
 /plugin marketplace add .
 
-# Install from local marketplace
+# Install one or both plugins
 /plugin install claude-code-meta
+/plugin install claude-code-scheduler
 
 # Or test directly with --plugin-dir flag
 claude --plugin-dir .
@@ -221,26 +238,91 @@ The agent will:
 - Design custom skills
 - Provide implementation guidance
 
-## Plugin Structure
+---
+
+## Plugin: claude-code-scheduler
+
+Automate recurring Claude Code tasks with intelligent cron job management. Schedule AI-powered workflows to run daily, weekly, or on custom intervals.
+
+### Key Features
+
+- 🕐 **Natural Language Scheduling** - "every weekday at 9am" → cron expression
+- 🤖 **AI-Powered Execution** - Claude Code tasks run on schedule
+- 📊 **Execution Tracking** - Monitor success rates, view logs, track history
+- 🔒 **Safe Management** - Namespaced jobs, backups, validation
+- 📝 **Task Templates** - Pre-configured workflows for common use cases
+
+### Quick Examples
+
+**Schedule a task:**
+```
+Schedule a task to review open PRs every weekday morning
+```
+
+**View scheduled tasks:**
+```
+Show my scheduled tasks
+```
+
+**Use a template:**
+```
+Set up the daily PR review template
+```
+
+### Pre-Built Templates
+
+The scheduler includes 15+ ready-to-use templates:
+- **Daily PR Review** - Automated code review
+- **Nightly Test Suite** - Test monitoring
+- **Weekly Code Quality** - Technical debt tracking
+- **Security Audit** - Vulnerability scanning
+- **Documentation Sync** - Docs accuracy checks
+- **Metrics Collection** - Analytics tracking
+- **Log Cleanup** - Automated maintenance
+- And more...
+
+### Platform Support
+
+- ✅ macOS - User-level cron
+- ✅ Linux - Full cron support
+- ❌ Windows - Future (Task Scheduler planned)
+
+For complete documentation, see [scheduler-plugin/README.md](scheduler-plugin/README.md)
+
+---
+
+## Repository Structure
 
 ```
 claude-code-meta-plugin/
 ├── .claude-plugin/
-│   └── plugin.json          # Plugin manifest
-├── skills/
+│   ├── plugin.json              # Meta plugin manifest
+│   └── marketplace.json         # Marketplace with both plugins
+├── skills/                       # Meta plugin skills
 │   ├── claudemd-generator/
 │   │   └── SKILL.md
 │   ├── command-generator/
 │   │   └── SKILL.md
 │   └── skill-generator/
 │       └── SKILL.md
-├── agents/
+├── agents/                       # Meta plugin agents
 │   └── project-architect.md
-├── commands/
+├── commands/                     # Meta plugin commands
 │   └── retrospective.md
+├── scheduler-plugin/             # Scheduler plugin (separate)
+│   ├── .claude-plugin/
+│   │   ├── plugin.json
+│   │   └── marketplace.json
+│   ├── skills/
+│   │   └── cron-scheduler/
+│   │       ├── SKILL.md
+│   │       ├── scripts/         # 6 helper scripts
+│   │       └── references/      # Documentation
+│   ├── README.md
+│   └── LICENSE
 ├── docs/
 │   └── getting-started.md
-├── README.md
+├── README.md                     # This file
 └── LICENSE
 ```
 

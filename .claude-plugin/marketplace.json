@@ -9,6 +9,12 @@
       "source": "./",
       "description": "Meta-plugin for generating Claude Code projects, skills, commands, and documentation. Provides tools to extend and customize Claude Code itself.",
       "version": "0.0.1"
+    },
+    {
+      "name": "claude-code-scheduler",
+      "source": "./scheduler-plugin",
+      "description": "Cron-based task scheduler for automating Claude Code workflows. Schedule recurring AI-powered tasks with intelligent cron management.",
+      "version": "0.1.0"
     }
   ]
 }
