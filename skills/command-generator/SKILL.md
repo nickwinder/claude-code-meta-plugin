@@ -36,7 +36,7 @@ Please provide comprehensive guidance on creating Claude Code slash commands inc
 3. Argument handling ($ARGUMENTS, $1, $2, etc.)
 4. Tool restrictions with allowed-tools
 5. When to use model overrides
-6. Bash execution syntax (!`command`)
+6. Bash execution syntax (!\`command\`)
 7. File reference syntax (@path/to/file)
 8. Best practices and common patterns
 9. Examples of different command types (deployment, review, quick reference, bash-only)
