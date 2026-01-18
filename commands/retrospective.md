@@ -1,6 +1,6 @@
 ---
 description: Reflect on conversation history and capture learnings into reusable artifacts
-argument-hint: [optional: what to focus on]
+argument-hint: "[optional: what to focus on]"
 ---
 
 # Retrospective
