@@ -10,9 +10,6 @@ A curated marketplace of plugins for extending and customizing Claude Code itsel
 ### 📦 claude-code-meta (v0.0.1)
 Meta-plugin for extending and customizing Claude Code. Generate CLAUDE.md files, create custom skills, design slash commands, and architect new Claude Code projects with expert guidance.
 
-### ⏰ claude-code-scheduler (v0.1.0)
-Cron-based task scheduler for automating Claude Code workflows. Schedule recurring AI-powered tasks with intelligent cron management.
-
 ---
 
 ## Plugin: claude-code-meta
@@ -123,14 +120,8 @@ Reflect on your work session and capture learnings into reusable artifacts.
 # Add the marketplace
 /plugin marketplace add nickwinder/claude-code-meta-plugin
 
-# Install the meta plugin (for project/skill generation)
+# Install the meta plugin
 /plugin install claude-code-meta
-
-# Install the scheduler plugin (for task automation)
-/plugin install claude-code-scheduler
-
-# Or install both
-/plugin install claude-code-meta claude-code-scheduler
 
 # Verify installation
 /plugin list
@@ -146,9 +137,8 @@ cd claude-code-meta-plugin
 # Add the local marketplace for testing
 /plugin marketplace add .
 
-# Install one or both plugins
+# Install the plugin
 /plugin install claude-code-meta
-/plugin install claude-code-scheduler
 
 # Or test directly with --plugin-dir flag
 claude --plugin-dir .
@@ -240,64 +230,13 @@ The agent will:
 
 ---
 
-## Plugin: claude-code-scheduler
-
-Automate recurring Claude Code tasks with intelligent cron job management. Schedule AI-powered workflows to run daily, weekly, or on custom intervals.
-
-### Key Features
-
-- 🕐 **Natural Language Scheduling** - "every weekday at 9am" → cron expression
-- 🤖 **AI-Powered Execution** - Claude Code tasks run on schedule
-- 📊 **Execution Tracking** - Monitor success rates, view logs, track history
-- 🔒 **Safe Management** - Namespaced jobs, backups, validation
-- 📝 **Task Templates** - Pre-configured workflows for common use cases
-
-### Quick Examples
-
-**Schedule a task:**
-```
-Schedule a task to review open PRs every weekday morning
-```
-
-**View scheduled tasks:**
-```
-Show my scheduled tasks
-```
-
-**Use a template:**
-```
-Set up the daily PR review template
-```
-
-### Pre-Built Templates
-
-The scheduler includes 15+ ready-to-use templates:
-- **Daily PR Review** - Automated code review
-- **Nightly Test Suite** - Test monitoring
-- **Weekly Code Quality** - Technical debt tracking
-- **Security Audit** - Vulnerability scanning
-- **Documentation Sync** - Docs accuracy checks
-- **Metrics Collection** - Analytics tracking
-- **Log Cleanup** - Automated maintenance
-- And more...
-
-### Platform Support
-
-- ✅ macOS - User-level cron
-- ✅ Linux - Full cron support
-- ❌ Windows - Future (Task Scheduler planned)
-
-For complete documentation, see [scheduler-plugin/README.md](scheduler-plugin/README.md)
-
----
-
 ## Repository Structure
 
 ```
 claude-code-meta-plugin/
 ├── .claude-plugin/
 │   ├── plugin.json              # Meta plugin manifest
-│   └── marketplace.json         # Marketplace with both plugins
+│   └── marketplace.json         # Marketplace configuration
 ├── skills/                       # Meta plugin skills
 │   ├── claudemd-generator/
 │   │   └── SKILL.md
@@ -309,17 +248,6 @@ claude-code-meta-plugin/
 │   └── project-architect.md
 ├── commands/                     # Meta plugin commands
 │   └── retrospective.md
-├── scheduler-plugin/             # Scheduler plugin (separate)
-│   ├── .claude-plugin/
-│   │   ├── plugin.json
-│   │   └── marketplace.json
-│   ├── skills/
-│   │   └── cron-scheduler/
-│   │       ├── SKILL.md
-│   │       ├── scripts/         # 6 helper scripts
-│   │       └── references/      # Documentation
-│   ├── README.md
-│   └── LICENSE
 ├── docs/
 │   └── getting-started.md
 ├── README.md                     # This file
